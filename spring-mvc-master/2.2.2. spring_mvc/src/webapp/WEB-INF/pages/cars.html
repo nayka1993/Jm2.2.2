@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        table {
+            width: 20%;
+            background: white;
+            color: white;
+            border-spacing: 1px;
+        }
+        td, th {
+            background: black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<div>
+
+    <h1><th th:text="${title}"></th></h1>
+    <th:block th:each="msg : ${cars}">
+        <table>
+            <tr>
+                <h4></h4>
+                <td>Name</td>
+                <th th:text="${msg.getName()}"></th>
+            </tr>
+            <tr>
+                <td>Color</td>
+                <th th:text="${msg.getColor()}">Color</th>
+            </tr>
+            <tr>
+                <td>Series</td>
+                <th th:text="${msg.getSeries()}">Series</th>
+            </tr>
+
+        </table>
+    </th:block>
+
+</div>
+
+
+</body>
+</html>
